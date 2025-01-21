@@ -5,10 +5,11 @@
     import { register } from "swiper/element/bundle";
     import 'swiper/css'
 
-    import cuppa from '$lib/images/cuppa-canada.png'
-    import bioconsulting from '$lib/images/bioconsulting.png'
-    import foro21 from '$lib/images/foro-21.png'
-    import pechus from '$lib/images/pechus-commerce.png'
+    import cuppa from '$lib/images/cuppa-canada.jpg'
+    import bioconsulting from '$lib/images/bioconsulting.jpg'
+    import foro21 from '$lib/images/foro-21.jpg'
+    import pechus from '$lib/images/pechus-commerce.jpg'
+    import dashboard from '$lib/images/dashboard-balance.jpg'
 
     import { language, dataLang } from '../store/store'
     import { data } from '$lib/data.js';
@@ -124,7 +125,38 @@
                 </div>
                 
                 <div class="container_number">03</div>
+            </div>
+        </swiper-slide>
 
+        <swiper-slide>
+            <div class="container_slide">
+                <div class="container_image">
+                    <img src={dashboard} alt="">
+                </div>
+                <div class="container_info">
+                    <h3>{$dataLang.projects.jobs[4].title}</h3>
+
+                    <p>{$dataLang.projects.jobs[4].description}</p>
+                    
+                    <a class="button" target="_blank" href="https://dashboard-balance.vercel.app/">{$dataLang.projects.jobs[4].button}</a>
+                </div>
+
+                <div class="tech_icons">
+                    <div class="skill html-fill">
+                        <Icon icon="akar-icons:html-fill" />
+                    </div>
+                    <div class="skill css-fill">
+                        <Icon icon="akar-icons:css-fill" />
+                    </div>
+                    <div class="skill javascript-fill">
+                        <Icon icon="akar-icons:javascript-fill" />
+                    </div>
+                    <div class="skill react-fill">
+                        <Icon icon="akar-icons:react-fill" />
+                    </div>
+                </div>
+                
+                <div class="container_number">04</div>
             </div>
         </swiper-slide>
     </swiper-container>
@@ -214,5 +246,10 @@
         font-size: 150px;
         opacity: 0.2;
         z-index: -1;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: var(--pry-color) !important;
     }
 </style>

@@ -74,6 +74,11 @@ export const data = [
                         description: 'Este ecommerce es un proyecto personal diseñado para mejorar mis habilidades en el front-end, donde se han implementado características como la capacidad de agregar productos a una lista de favoritos, así como también añadir productos a un carro de compras, entre otras funcionalidades. Este proyecto fue desarrollado utilizando SvelteKit, lo que me permitió explorar y dominar las capacidades de este framework para crear una experiencia de usuario fluida e interactiva.',
                         button: 'Ver sitio web'
                     },
+                    {
+                        title: "Finance Dashboard",
+                        description: 'Este proyecto consiste en un panel de control interactivo diseñado para ayudar a los usuarios a monitorear sus finanzas personales de manera eficiente. La aplicación presenta un diseño moderno y funcional que incluye: Resumen financiero, Gestión de presupuestos, Ahorros, Historial de transacciones y Facturas recurrentes.',
+                        button: 'Ver sitio web'
+                    },
                 ]
             },
             contact: {
@@ -164,10 +169,15 @@ export const data = [
                         description: "This ecommerce website is a personal project aimed at enhancing my front-end skills, featuring functionalities such as the ability to add products to a favorites list and to a shopping cart, among other features. Developed using SvelteKit, this project allowed me to explore and master the capabilities of this framework to create a seamless and interactive user experience.",
                         button: 'See project'
                     },
+                    {
+                        title: "Finance Dashboard",
+                        description: 'This project is an interactive dashboard designed to help users efficiently monitor their personal finances. The application features a modern and functional design that includes: Financial Overview, Budget Management, Savings, Transaction History, Recurring Bills',
+                        button: 'Ver sitio web'
+                    },
                 ]
             },
             contact: {
-                title: "Lets's talk!",
+                title: "Let's talk!",
                 description: "I'm here to help with your web projects. Get in touch with me and let's work together to bring your ideas to life.",
                 form: {
                     name: 'Name',

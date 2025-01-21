@@ -1,68 +1,60 @@
 <script>
+// @ts-nocheck
+
     import Icon from "@iconify/svelte";
     import { page } from "$app/stores";
-    import { language, dataLang, themeColor } from '../store/store'
+    import { language, dataLang, themeColor } from '../store/store';
     import { data } from '$lib/data.js';
     import { browser } from "$app/environment";
-    // import { onMount } from 'svelte'
+    // import { onMount } from 'svelte';
 
-    let idioma = 'es'
-    let themeColorStorage = 'dark'
+    let idioma = 'es';
+    let themeColorStorage = 'dark';
 
-    let openMenu = false
+    let openMenu = false;
 
-    // @ts-ignore
-    $: $language = idioma
-    // @ts-ignore
+    $: $language = idioma;
     $: $dataLang = data.find((item) => item.lang === $language)?.data || '';
     
-    // @ts-ignore
     const handleLang = (lang) => {
-        idioma = lang
-    }
+        idioma = lang;
+    };
     
-    // @ts-ignore
     const handleTheme = (e) => {
-        e.target.checked ? $themeColor = 'light' : $themeColor = 'dark'
+        e.target.checked ? $themeColor = 'light' : $themeColor = 'dark';
         
-        let body = document.querySelector('body')
-
-        // @ts-ignore
-        body.setAttribute('class', $themeColor)
-    }
+        let body = document.querySelector('body');
+        body.setAttribute('class', $themeColor);
+    };
 
     if (browser) {
         idioma = window.localStorage.getItem("languageSite") || "es";
         themeColorStorage = window.localStorage.getItem("themeSite") || "dark";
-        handleLang(idioma)
+        handleLang(idioma);
 
-        let body = document.querySelector('body')
-
-        // @ts-ignore
-        body.setAttribute('class', `${themeColorStorage}`)
+        let body = document.querySelector('body');
+        body.setAttribute('class', `${themeColorStorage}`);
     }
 
-   // @ts-ignore
-     $: if (browser) {
+    $: if (browser) {
         window.localStorage.setItem("languageSite", $language);
         window.localStorage.setItem("themeSite", $themeColor);
     }
     
     $: liActive = $page.url.hash.substring(1) || 'about';
 
-    // @ts-ignore
     export const handleLi = (listItem) => {
-        liActive = listItem
-    }
+        liActive = listItem;
+    };
     
     // onMount(() => {
-    //     let body = document.querySelector('body')
-    //     body.addEventListener('click', (e) => closeMenu(e))
-    // })
+    //     let body = document.querySelector('body');
+    //     body.addEventListener('click', (e) => closeMenu(e));
+    // });
     
     // const closeMenu = (e) => {
-    //     console.log(e)
-    // }
+    //     console.log(e);
+    // };
 </script>
 
 <header>
@@ -77,8 +69,11 @@
         </div>
 
         <label class="switch">
-            <input type="checkbox" on:change={(e) => handleTheme(e)}>
-            <span class="slider"></span>
+            <input type="checkbox" on:change={(e) => handleTheme(e)} checked={themeColorStorage === 'light'}>
+            <div class="slider">
+                <span class="moon-outline"><Icon icon="solar:moon-outline" width="16" height="16" /></span>
+                <span class="sun-filled"><Icon color='#0009' icon="tabler:sun-filled" width="16" height="16" /></span>
+            </div>
         </label>
     
         <ul class={ openMenu ? 'active' : '' }>
@@ -146,11 +141,14 @@
     .switch {
         --secondary-container: #d6d6d6;
         --primary: rgb(143, 143, 143);
+        width: 3.7em;
+        height: 1.8em;
+        background-color: #313033;
+        border-radius: 30px;
+        cursor: pointer;
         font-size: 12px;
         position: relative;
         display: inline-block;
-        width: 3.7em;
-        height: 1.8em;
         margin-right: auto;
     }
 
@@ -163,18 +161,6 @@
 
     .slider {
         position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #313033;
-        transition: .2s;
-        border-radius: 30px;
-    }
-
-    .slider:before {
-        position: absolute;
         content: "";
         height: 1.4em;
         width: 1.4em;
@@ -185,19 +171,42 @@
         transition: .4s;
     }
 
-    :global(body.light) input:checked + .slider::before {
-        background-color: var(--primary);
+    .slider span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .4s;
     }
 
-    :global(body.light) input:checked + .slider {
-        background-color: var(--secondary-container);
+    .moon-outline {
+        opacity: 0;
+    }
+
+    .sun-filled {
+        opacity: 1;
+    }
+
+    :global(body.light) .moon-outline {
+        opacity: 0 !important;
+    }
+
+    :global(body.light) .sun-filled {
+        opacity: 1 !important;
+    }
+
+    :global(body.dark) .moon-outline {
+        opacity: 1 !important;
+    }
+
+    :global(body.dark) .sun-filled {
+        opacity: 0 !important;
     }
 
     input:focus + .slider {
         box-shadow: 0 0 1px var(--secondary-container);
     }
 
-    input:checked + .slider:before {
+    input:checked + .slider {
         transform: translateX(1.9em);
     }
 
