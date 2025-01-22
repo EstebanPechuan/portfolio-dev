@@ -61,7 +61,8 @@ export const data = [
                     },
                     {
                         title: 'Bioconsulting',
-                        description: 'Bioconsulting fue un sitio desafiante en el que participé, caracterizado por sus efectos de parallax e interacción con los eventos del mouse del visitante, como se puede apreciar en la página de <a target="_blank" style="color: var(--pry-color);" href="https://estebanpechuan.github.io/bioconsulting/error.html">error del sitio</a>. Este proyecto fue realizado exclusivamente con HTML, CSS y JS, aprovechando al máximo las propiedades nativas de estos lenguajes para crear una experiencia web impactante y visualmente atractiva.',
+                        description: 'Este proyecto fue realizado exclusivamente con HTML, CSS y JS, aprovechando al máximo las propiedades nativas de estos lenguajes para crear una experiencia web impactante y visualmente atractiva. Bioconsulting fue un sitio desafiante en el que participé, caracterizado por sus efectos de parallax e interacción con los eventos del mouse del visitante, como se puede apreciar en la página de ',
+                        paginaDeError: 'error del sitio',
                         button: 'Ver sitio web'
                     },
                     {
@@ -156,7 +157,8 @@ export const data = [
                     },
                     {
                         title: 'Bioconsulting',
-                        description: "Bioconsulting was a challenging project in which I worked, notable for its parallax effects and interaction with visitor mouse events. My role was pivotal in implementing these elements, which provide a visually striking and immersive experience for users. One of the project's highlights is the site's <a target='_blank' style='color: var(--pry-color);' href='https://estebanpechuan.github.io/bioconsulting/error.html'>error page</a>, where these effects can be observed in action, creating a unique and memorable experience for site visitors.",
+                        description: "This project was created exclusively with HTML, CSS, and JS, making the most of the native properties of these languages to deliver an impactful and visually appealing web experience. Bioconsulting was a challenging site I worked on, characterized by its parallax effects and interaction with the visitor's mouse events, as showcased on the ",
+                        paginaDeError: "site's error page",
                         button: 'See project'
                     },
                     {

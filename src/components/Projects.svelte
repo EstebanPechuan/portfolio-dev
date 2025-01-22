@@ -62,6 +62,39 @@
 
             </div>
         </swiper-slide>
+        
+        <swiper-slide>
+            <div class="container_slide">
+                <div class="container_image">
+                    <img src={bioconsulting} alt="">
+                </div>
+                <div class="container_info">
+                    <h3>{$dataLang.projects.jobs[1].title}</h3>
+
+                    <p>
+                        {$dataLang.projects.jobs[1].description}
+                        <a target="_blank" style="color: var(--pry-color);" href="https://estebanpechuan.github.io/bioconsulting/error.html">{$dataLang.projects.jobs[1].paginaDeError}</a>.
+                    </p>
+                    
+                    <a class="button" target="_blank" href="https://estebanpechuan.github.io/bioconsulting/">{$dataLang.projects.jobs[1].button}</a>
+                </div>
+
+                <div class="tech_icons">
+                    <div class="skill html-fill">
+                        <Icon icon="akar-icons:html-fill" />
+                    </div>
+                    <div class="skill css-fill">
+                        <Icon icon="akar-icons:css-fill" />
+                    </div>
+                    <div class="skill javascript-fill">
+                        <Icon icon="akar-icons:javascript-fill" />
+                    </div>
+                </div>
+                
+                <div class="container_number">02</div>
+
+            </div>
+        </swiper-slide>
 
         <swiper-slide>
             <div class="container_slide">
@@ -91,7 +124,7 @@
                     </div>
                 </div>
                 
-                <div class="container_number">02</div>
+                <div class="container_number">03</div>
 
             </div>
         </swiper-slide>
@@ -124,7 +157,7 @@
                     </div>
                 </div>
                 
-                <div class="container_number">03</div>
+                <div class="container_number">04</div>
             </div>
         </swiper-slide>
 
@@ -156,7 +189,7 @@
                     </div>
                 </div>
                 
-                <div class="container_number">04</div>
+                <div class="container_number">05</div>
             </div>
         </swiper-slide>
     </swiper-container>
