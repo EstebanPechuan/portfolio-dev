@@ -37,7 +37,7 @@
 
                     <p>{$dataLang.projects.jobs[0].description}</p>
                     
-                    <a class="button" target="_blank" href="https://cuppacanada.com/">{$dataLang.projects.jobs[0].button}</a>
+                    <a class="button" target="_blank" href="https://cuppa-coffee-ivory.vercel.app/">{$dataLang.projects.jobs[0].button}</a>
                 </div>
 
                 <div class="tech_icons">
@@ -248,8 +248,8 @@
         z-index: -1;
     }
 
-    .swiper-button-prev,
+    /* .swiper-button-prev,
     .swiper-button-next {
         color: var(--pry-color) !important;
-    }
+    } */
 </style>
