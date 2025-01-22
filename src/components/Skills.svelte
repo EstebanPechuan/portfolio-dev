@@ -163,51 +163,51 @@
         text-align: center;
     }
 
-    /* .skill:nth-child(1) {
+    /* .skill.html-fill {
         --skill-color: var(--pry-color);
     }
 
-    .skill:nth-child(2) {
-        --skill-color: rgb(228, 77, 38);
-    }
-
-    .skill:nth-child(3) {
+    .skill.css-fill {
         --skill-color: rgb(21, 114, 182);
     }
 
-    .skill:nth-child(4) {
+    .skill.sass {
         --skill-color: rgb(205, 103, 153);
     }
+    
+    .skill.bootstrap-fill {
+        --skill-color: rgb(126, 19, 248);
+    }
 
-    .skill:nth-child(5) {
+    .skill.javascript-fill {
+        --skill-color: #ffca28;
+    }
+    
+    .skill.react-fill {
         --skill-color: rgb(0, 216, 255);
     }
 
-    .skill:nth-child(6) {
+    .skill.svelte {
         --skill-color: var(--pry-color);
     }
-
-    .skill:nth-child(7) {
+    
+    .skill.vue-16 {
         --skill-color: rgb(65, 184, 131);
     }
-
-    .skill:nth-child(8) {
-        --skill-color: rgb(126, 19, 248);
-    }
     
-    .skill:nth-child(9) {
-        --skill-color: rgb(0, 96, 116);
+    .skill.badge-3d {
+        --skill-color: rgb(34, 193, 224);
     }
 
-    .skill:nth-child(10) {
+    .skill.material-ui  {
         --skill-color: rgb(0, 127, 255);
     }
 
-    .skill:nth-child(11) {
+    .skill.tailwind  {
         --skill-color: rgb(68, 168, 179);
     }
 
-    .skill:nth-child(12) {
+    .skill.firebase-solid  {
         --skill-color: #ffca28;
     }
 
