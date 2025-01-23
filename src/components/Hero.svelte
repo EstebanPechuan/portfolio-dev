@@ -119,12 +119,17 @@
         gap: 20px;
     }
 
-    .buttons a:nth-child(1) {
+    .buttons a:nth-child(1),
+    .buttons a:nth-child(2):hover {
         background: var(--pry-color);
         border: 2px solid var(--pry-color);
         border-radius: 8px;
         padding: 10px 15px;
         color: #fff
+    }
+
+    .buttons a:nth-child(1):hover {
+        opacity: 0.8;
     }
 
     .buttons a {
