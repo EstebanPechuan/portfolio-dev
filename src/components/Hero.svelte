@@ -2,7 +2,7 @@
     import { language, dataLang } from '../store/store'
     import { data } from '$lib/data.js';
     import user from '$lib/images/user-image-removebg.png'
-    import CV from '$lib/CV Front End - Esteban Pechuan.pdf'
+    import CV from '$lib/CV Front End Developer - Juan Esteban Pechuan.pdf'
 
     $: $dataLang = data.find((item) => item.lang === $language)?.data || '';
 </script>
