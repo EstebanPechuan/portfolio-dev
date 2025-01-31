@@ -22,7 +22,7 @@
                 ease: 'back.out(10)',
                 scrollTrigger: {
                     trigger: item,
-                    start: 'top bottom-=100',
+                    start: 'top bottom-=250',
                     toggleActions: 'play none none reverse',
                 }
             })

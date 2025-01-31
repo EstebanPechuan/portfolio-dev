@@ -8,7 +8,7 @@
     import { browser } from "$app/environment";
     // import { onMount } from 'svelte';
 
-    let idioma = 'es';
+    let idioma = 'en';
     let themeColorStorage = 'dark';
 
     let openMenu = false;
@@ -28,7 +28,7 @@
     };
 
     if (browser) {
-        idioma = window.localStorage.getItem("languageSite") || "es";
+        idioma = window.localStorage.getItem("languageSite") || "en";
         themeColorStorage = window.localStorage.getItem("themeSite") || "dark";
         handleLang(idioma);
 
